@@ -1,0 +1,5 @@
+pandas
+qdrant-client
+cohere
+transformers
+torch  # Required for transformers
