@@ -1,7 +1,0 @@
-streamlit
-pandas
-qdrant-client
-cohere
-transformers
-torch
-PyPDF2
