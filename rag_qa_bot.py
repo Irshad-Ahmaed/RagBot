@@ -58,7 +58,13 @@ def get_answer(user_question):
     if not results:
         return "Question not found."
     
-    retrieved_answers = [result.payload["answer"] for result in results]
+    retrieved_answers = []
+    for result in results:
+        if 'answer' in result.payload:
+            retrieved_answers.append(result.payload['answer'])
+    
+    if not retrieved_answers:
+        return "No relevant answers found."
     
     # Generate answer using Cohere
     response = co.generate(
